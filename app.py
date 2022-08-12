@@ -10,6 +10,7 @@ with tab1:
     st.subheader("Topic-Document Distribution")
     count_tab1 = st.radio("Fitted Topic Model Count", ('50 Topics', '360 (All) Topics'), key="st1", horizontal=True)
     st.markdown("This visualization plots the ONET task sentence embeddings based on their proximity to other embedded tasks, while simultanelously color-coding the embeddings by their most probable document. This offers an overview of both the full sentences associated with found topics as well as how the topics are mapped in proximity to each other within the projected embedding space. You can hover over a data point and see its full task sentence.")
+    st.markdown("**Note:** This visualization does not always render properly within Google Chrome browsers.")
     if count_tab1 == "50 Topics":
         docviz_html = open("./html/doc_viz.html", 'r', encoding='utf-8')
         doc_source_code = docviz_html.read() 
